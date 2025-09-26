@@ -43,7 +43,7 @@ export default function ModulesPage() {
 
       // Step 2: fetch topics for each module
       const newTopics: Record<string, Topic[]> = {};
-      for (let mod of mods) {
+      for (const mod of mods) {
         const { data: t, error: topicErr } = await supabase
           .from("topics")
           .select("id, name")
